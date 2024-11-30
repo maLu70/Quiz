@@ -1,8 +1,8 @@
 body {
     background-color: antiquewhite;
-    border: red solid 2px;
-    height: 98vh;
+    height: 97vh;
     border:0;
+    background-image: url(/img/gramadocortado\ \(2\).jpg);
     display: flex;
     justify-content: center;
     align-items: center;

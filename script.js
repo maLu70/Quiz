@@ -104,8 +104,10 @@ function controlePerguntas() {
     let btnAnterior = document.querySelector("#btnAnt")
     let btnFinal = document.querySelector("#btnFinal")
 
-    document.querySelector("#perguntas").innerHTML = arrayPerguntas[i].pergun
-    alternativas()
+    if (i < 10) {
+        document.querySelector("#perguntas").innerHTML = arrayPerguntas[i].pergun
+        alternativas()
+    }
 
     if (i > 0) {
         btnAnterior.style.display = ("block")
@@ -115,6 +117,18 @@ function controlePerguntas() {
 
     if (i == arrayPerguntas.length - 1) {
         btnFinal.innerText = ("Finalizar")
+    } else if (i < arrayPerguntas.length - 1) {
+        btnFinal.innerText = ("Próxima")
+    } else if (i >= arrayPerguntas.length) {
+        document.querySelector(".pgFinal").style.display = ("block")
+        document.querySelector(".pgPerguntas").style.display = ("none")
+        
+        setTimeout(() => {
+            window.open('resultados/girassol.html')
+            console.log("foifoi");
+            //document.querySelector("#temp").innerHTML = 
+
+        }, 5000);
     }
 }
 
