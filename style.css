@@ -1,5 +1,14 @@
+@font-face {
+    font-family: "Brianne";
+    src: url("fonts/Brianne_s_hand.ttf") format("truetype");
+
+}
+
 body {
     background-color: antiquewhite;
+    font-family: "Brianne";
+    font-size: 1.3rem;
+    letter-spacing: 1px;
     height: 97vh;
     border:0;
     background-image: url(/img/gramadocortado\ \(2\).jpg);
@@ -11,10 +20,27 @@ body {
 .container {
     width: 40vw;
     height: 60vh;
-    background-color: white;
-    box-shadow: rgb(185, 185, 185) 0px 0px 10px;
 }
 
 .pgPerguntas {
     display: none;
+}
+
+.container img{
+    position: absolute;
+    z-index: -5;
+    width: 40vw;
+    height: 60vh;
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+}
+
+button {
+    background-color: rgb(139, 65, 23);
+    color: rgb(212, 158, 91);
+    font-family: "Brianne";
+    font-size: 1.5rem;
+    width: 130px;
+    height: auto;
+    border: solid 1px rgb(107, 76, 19);
+    box-shadow: 0 0 2px black;
 }

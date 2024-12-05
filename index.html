@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,41 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
+        <img src="img/cartar.png" alt="">
         <div class="pgInicial">
-            <div><img src="https://media.tenor.com/hH7RVruIvCsAAAAj/jirasol.gif" alt=""></div>
             <h1>Qual Planta Diurna Voce Seria? </h1>
-            <button id="btnComecar" onclick="comecar()">Começar</button>
+            <button id="btnComecar" onclick="comecar()">COMECAR</button>
         </div>
 
         <div class="pgPerguntas">
+
             <p id="perguntas"></p>
-            <button id="btnAnt" onclick="anterior()" style="display: none;">Anterior</button>
-            <button id="btnFinal" onclick="proxima()">Próxima</button>
 
             <input name="radios" type="radio" value="radio1" id="a">
             <label for="a" id="lblA">teste</label>
 
+            <br>
+
             <input name="radios" type="radio" value="radio2" id="b">
-            <label for="b" id="lblB" >teste</label>
+            <label for="b" id="lblB">teste</label>
+
+            <br>
 
             <input name="radios" type="radio" value="radio3" id="c">
             <label for="c" id="lblC">teste</label>
 
+            <br>
+
             <input name="radios" type="radio" value="radio4" id="d">
             <label for="d" id="lblD">teste</label>
+
+            <div id="btn">
+                <button id="btnAnt" onclick="anterior()" style="display: none;">ANTERIOR</button>
+                <button id="btnFinal" onclick="proxima()">PROXIMA</button>
+            </div>
 
         </div>
 
@@ -39,7 +51,8 @@
             <p id="temp"></p>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

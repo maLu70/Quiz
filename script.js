@@ -1,79 +1,81 @@
 let arrayPerguntas = [
     per1 = {
-        pergun: "test1",
-        a: "a",
-        b: "b",
-        c: "c",
-        d: "d"
+        pergun: "Qual sua estação favorita?",
+        a: "Verão.",
+        b: "Outono.",
+        c: "Inverno.",
+        d: "Primavera."
     },
     per2 = {
-        pergun: "test2",
-        a: "aa",
-        b: "bb",
-        c: "cc",
-        d: "dd"
+        pergun: " No seu grupo de amigos você é a pessoa?",
+        a: "Calmo(a), quieto(a).",
+        b: "Esquisito(a).",
+        c: "Animado(a) e extrovertido(a).",
+        d: "Quieto(a), mas sempre ouvindo."
     },
     per3 = {
-        pergun: "test3",
-        a: "aa3",
-        b: "bb3",
-        c: "cc3",
-        d: "dd3"
+        pergun: "Quando você enfrenta um novo desafio o que faz primeiro?",
+        a: " Organizo um plano detalhado antes de começar.",
+        b: "Reúno as pessoas para buscar uma solução em grupo.",
+        c: "Mergulho no problema e lidero a solução.",
+        d: "Crio uma abordagem única ou inovadora."
     },
     per4 = {
-        pergun: "test4",
-        a: "aa4",
-        b: "bb4",
-        c: "cc4",
-        d: "dd4"
+        pergun: "Em um projeto qual seu papel normalmente?",
+        a: "Analiza, pensa em tudo e depois executa.",
+        b: "Gosta de liderar mas nunca gosta do resultado.",
+        c: "Não  faz nada, só apoia.",
+        d: "Liderar e apoiar os outros a fazer mais coisas."
     },
     per5 = {
-        pergun: "test5",
-        a: "aa5",
-        b: "bb5",
-        c: "cc5",
-        d: "dd5"
+        pergun: "Como você age em conflitos?",
+        a: "Aceita o que fazem para você.",
+        b: "Resolver sempre sem brigas.",
+        c: "Defende seus pensamentos antes de tudo.",
+        d: "Foca em brigar e mostrar que você é melhor."
     },
     per6 = {
-        pergun: "test6",
+        pergun: "O que te motiva a trabalhar?",
         a: "aa6",
-        b: "bb6",
-        c: "cc6",
+        b: "Datas, necessidade ou alguém apressando.",
+        c: "Dinheiro.",
         d: "dd6"
     },
     per7 = {
-        pergun: "test7",
-        a: "aa7",
-        b: "bb7",
-        c: "cc7",
-        d: "dd7"
+        pergun: "Qual frase combina mais contigo?",
+        a: "“Devagar e sempre.”",
+        b: "“Se acalme, tudo vai passar”",
+        c: "“FIcarei ao teu lado até o fim”",
+        d: "“A criatividade transforma problemas em oportunidades”"
     },
     per8 = {
-        pergun: "tes8",
-        a: "aa8",
-        b: "bb8",
-        c: "cc8",
-        d: "dd8"
+        pergun: "Qual sua maior qualidade?",
+        a: "Calmo",
+        b: "Persistente",
+        c: "Empenhado",
+        d: "Resiliente"
     },
     per9 = {
-        pergun: "test9",
-        a: "aa9",
-        b: "bb9",
-        c: "cc9",
-        d: "dd9"
+        pergun: "Se você tivesse que fazer algo maluco, o que faria?",
+        a: "Me mataria pela pátria",
+        b: "Colocaria uma panela na cabeça e sairia falando com objetos inanimados",
+        c: "Comeria um cérebro humano",
+        d: "Comeria um humano inteiro"
     },
     per10 = {
-        pergun: "test10",
-        a: "aa10",
-        b: "bb10",
-        c: "cc10",
-        d: "dd10"
+        pergun: "Qual a profissão mais se encaixa para você?",
+        a: "Médico",
+        b: "Engenheiro",
+        c: "Professor",
+        d: "Empreendedor"
     }
 ]
 
 let arrayRespostas = []
 
 let i = 0
+
+let cereja = 0, ervilha1 = 0, ervilha2 = 0, girassol = 0, batatinha = 0, geloErvilha = 0, batata = 0, carnivora = 0
 
 function comecar() {
     document.querySelector(".pgPerguntas").style.display = ("block")
@@ -116,9 +118,9 @@ function controlePerguntas() {
     }
 
     if (i == arrayPerguntas.length - 1) {
-        btnFinal.innerText = ("Finalizar")
+        btnFinal.innerText = ("FINALIZAR")
     } else if (i < arrayPerguntas.length - 1) {
-        btnFinal.innerText = ("Próxima")
+        btnFinal.innerText = ("PROXIMA")
     } else if (i >= arrayPerguntas.length) {
         document.querySelector(".pgFinal").style.display = ("block")
         document.querySelector(".pgPerguntas").style.display = ("none")
@@ -166,4 +168,47 @@ function controleRadios() {
     if (radioAnterior !== undefined && radioAnterior !== -1) {
         radios[radioAnterior].checked = true
     }
+}
+
+function contPontos() {
+
+    for(let j = 0; j < 10; j++) {
+
+        if (arrayRespostas[j] == 0 || j == 0 ) {
+            switch(arrayRespostas[j]) {
+                case 0:
+                    girassol =+ 2
+                    cereja =+ 0.5
+                    batatinha =+ 0.3
+                    break;
+
+                case 1:
+                    batata =+ 0.5
+                    break
+
+                case 2:
+                    geloErvilha =+ 1
+                    break;
+
+                case 3:
+                    ervilha1 =+ 1
+                    ervilha2 =+ 1
+                    break;
+            }
+        }
+
+        if (arrayRespostas[j] == 0 || j == 1 ) {
+            batatinha =+ 0.5
+            batata =+ 1
+        } else if (arrayRespostas[j] == 1 || j == 1 ) {
+            batatinha =+ 1.5
+        } else if (arrayRespostas[j] == 2 || j == 1 ) {
+            ervilha2 =+ 0.6
+        } else if (arrayRespostas[j] == 3 || j == 1 ) {
+            ervilha1 =+ 1
+            girassol =+ 2
+        }
+    
+    }
+
 }
