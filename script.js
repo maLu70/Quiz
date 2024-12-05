@@ -78,7 +78,7 @@ let i = 0
 let cereja = 0, ervilha1 = 0, ervilha2 = 0, girassol = 0, batatinha = 0, geloErvilha = 0, batata = 0, carnivora = 0
 
 function comecar() {
-    document.querySelector(".pgPerguntas").style.display = ("block")
+    document.querySelector(".pgPerguntas").style.display = ("flex")
     document.querySelector(".pgInicial").style.display = ("none")
 
     document.querySelector("#perguntas").innerHTML = arrayPerguntas[0].pergun
@@ -122,9 +122,27 @@ function controlePerguntas() {
     } else if (i < arrayPerguntas.length - 1) {
         btnFinal.innerText = ("PROXIMA")
     } else if (i >= arrayPerguntas.length) {
+        faltaDresposta()
+    }
+}
+
+function faltaDresposta() {
+    let semResposta = 0
+
+    arrayPerguntas.forEach((e) => {
+        if (e === -1) {
+            semResposta++
+            console.log(semResposta);
+        }
+    })
+
+    if (semResposta != 0) {
+        alert("oi")
+        console.log("semresposta")
+    } else {
         document.querySelector(".pgFinal").style.display = ("block")
         document.querySelector(".pgPerguntas").style.display = ("none")
-        
+
         setTimeout(() => {
             window.open('resultados/girassol.html')
             console.log("foifoi");
@@ -132,6 +150,7 @@ function controlePerguntas() {
 
         }, 5000);
     }
+
 }
 
 function alternativas() {
@@ -172,43 +191,181 @@ function controleRadios() {
 
 function contPontos() {
 
-    for(let j = 0; j < 10; j++) {
+    for (let j = 0; j < 10; j++) {
 
-        if (arrayRespostas[j] == 0 || j == 0 ) {
-            switch(arrayRespostas[j]) {
+        if (j == 0) {
+            switch (arrayRespostas[j]) {
                 case 0:
-                    girassol =+ 2
-                    cereja =+ 0.5
-                    batatinha =+ 0.3
+                    girassol = + 2
+                    cereja = + 0.5
+                    batatinha = + 0.3
                     break;
 
                 case 1:
-                    batata =+ 0.5
+                    batata = + 0.5
                     break
 
                 case 2:
-                    geloErvilha =+ 1
+                    geloErvilha = + 1
                     break;
 
                 case 3:
-                    ervilha1 =+ 1
-                    ervilha2 =+ 1
+                    ervilha1 = + 1
+                    ervilha2 = + 1
                     break;
             }
         }
 
-        if (arrayRespostas[j] == 0 || j == 1 ) {
-            batatinha =+ 0.5
-            batata =+ 1
-        } else if (arrayRespostas[j] == 1 || j == 1 ) {
-            batatinha =+ 1.5
-        } else if (arrayRespostas[j] == 2 || j == 1 ) {
-            ervilha2 =+ 0.6
-        } else if (arrayRespostas[j] == 3 || j == 1 ) {
-            ervilha1 =+ 1
-            girassol =+ 2
+        if (j == 1) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    batatinha = + 0.5
+                    batata = + 1
+                    break;
+
+                case 1:
+                    batatinha = + 1.5
+                    break
+
+                case 2:
+                    ervilha2 = + 0.6
+                    break;
+
+                case 3:
+                    ervilha1 = + 1
+                    girassol = + 2
+                    break;
+            }
         }
-    
+
+        if (j == 2) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 3) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 4) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 5) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 6) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 7) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 8) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
+        if (j == 9) {
+            switch (arrayRespostas[j]) {
+                case 0:
+                    break;
+
+                case 1:
+                    break
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
+        }
+
     }
 
 }

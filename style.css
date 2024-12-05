@@ -19,11 +19,19 @@ body {
 
 .container {
     width: 40vw;
-    height: 60vh;
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
 
 .pgPerguntas {
-    display: none;
+    font-size: 2rem;
+    width: 30vw;
+    height: 50vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container img{
@@ -43,4 +51,15 @@ button {
     height: auto;
     border: solid 1px rgb(107, 76, 19);
     box-shadow: 0 0 2px black;
+}
+
+#btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pgInicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
