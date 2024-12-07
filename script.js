@@ -196,22 +196,22 @@ function contPontos() {
         if (j == 0) {
             switch (arrayRespostas[j]) {
                 case 0:
-                    girassol = + 2
-                    cereja = + 0.5
-                    batatinha = + 0.3
+                    girassol += 2
+                    cereja += 0.5
+                    batatinha += 0.3
                     break;
 
                 case 1:
-                    batata = + 0.5
+                    batata += 0.5
                     break
 
                 case 2:
-                    geloErvilha = + 1
+                    geloErvilha += 1
                     break;
 
                 case 3:
-                    ervilha1 = + 1
-                    ervilha2 = + 1
+                    ervilha1 += 1
+                    ervilha2 += 1
                     break;
             }
         }
@@ -219,21 +219,21 @@ function contPontos() {
         if (j == 1) {
             switch (arrayRespostas[j]) {
                 case 0:
-                    batatinha = + 0.5
-                    batata = + 1
+                    batatinha += 0.5
+                    batata += 1
                     break;
 
                 case 1:
-                    batatinha = + 1.5
+                    batatinha += 1.5
                     break
 
                 case 2:
-                    ervilha2 = + 0.6
+                    ervilha2 += 0.6
                     break;
 
                 case 3:
-                    ervilha1 = + 1
-                    girassol = + 2
+                    ervilha1 += 1
+                    girassol += 2
                     break;
             }
         }
@@ -241,15 +241,22 @@ function contPontos() {
         if (j == 2) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    ervilha1++
+                    geloErvilha ++
+                    ervilha2+=2
                     break;
-
+    
                 case 1:
                     break
-
+                    ervilha1 += 0.5
+                    geloErvilha += 0.5
+                    ervilha2 +=1
                 case 2:
                     break;
-
+                    girassol += 0.5
                 case 3:
+                    carnivora++
+                    batatinha+= 0.8
                     break;
             }
         }
@@ -257,15 +264,24 @@ function contPontos() {
         if (j == 3) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    ervilha1++
+                    geloErvilha+=0.5
+                    ervilha2++
                     break;
 
                 case 1:
+                    cereja+=2
                     break
 
                 case 2:
+                    girassol++
+                    batata++
+                    batatinha+=0.5
                     break;
 
                 case 3:
+                    geloErvilha+=0.7
+                    ervilha2+=0.7
                     break;
             }
         }
@@ -273,15 +289,21 @@ function contPontos() {
         if (j == 4) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    batata+=1.5
                     break;
 
                 case 1:
+                    girassol++
                     break
 
                 case 2:
+                    cereja+=1.5
+                    carnivora+=2
                     break;
 
                 case 3:
+                    cereja+=1.5
+                    geloErvilha++
                     break;
             }
         }
@@ -289,15 +311,21 @@ function contPontos() {
         if (j == 5) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    girassol++
                     break;
 
                 case 1:
+                    carnivora++
                     break
 
                 case 2:
+                    cereja++
+                    batatinha+=2
                     break;
 
                 case 3:
+                    cereja+=2
+                    carnivora+=2
                     break;
             }
         }
@@ -305,15 +333,20 @@ function contPontos() {
         if (j == 6) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    girassol+=0,5
+                    batata+=1.5
                     break;
 
                 case 1:
+                    geloErvilha+=2
                     break
 
                 case 2:
+                    ervilha1+=2
                     break;
 
                 case 3:
+                    batata+=0,7
                     break;
             }
         }
@@ -321,15 +354,28 @@ function contPontos() {
         if (j == 7) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    ervilha1++
+                    batata+=0.3
+                    batatinha+=0.4
                     break;
 
                 case 1:
+                    girassol+=0.5
+                    ervilha2+=1.2
+                    batatinha++
+                    geloErvilha++
                     break
 
                 case 2:
+                    ervilha2+=1.5
+                    batatinha+=0,5
+                    geloErvilha++
+                    ervilha1+=1.5
                     break;
 
                 case 3:
+                    batatinha++
+                    batata+=1.5
                     break;
             }
         }
@@ -337,15 +383,20 @@ function contPontos() {
         if (j == 8) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    batata+=2
+                    cereja+=1,5
                     break;
 
                 case 1:
+                    //DAVE DOIDÃO
                     break
 
                 case 2:
+                    //Zumbi????????
                     break;
 
                 case 3:
+                    carnivora+=2
                     break;
             }
         }
@@ -353,15 +404,21 @@ function contPontos() {
         if (j == 9) {
             switch (arrayRespostas[j]) {
                 case 0:
+                    girassol++
                     break;
 
                 case 1:
+                    batatinha+=0,5
                     break
 
                 case 2:
+                    ervilha1++
+                    ervilha2++
+                    geloErvilha+=1.3
                     break;
 
                 case 3:
+                    girassol+=0.5
                     break;
             }
         }
