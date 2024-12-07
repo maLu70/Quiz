@@ -1,52 +1,52 @@
 let arrayPerguntas = [
     per1 = {
-        pergun: "Qual sua estação favorita?",
-        a: "Verão.",
+        pergun: "Qual sua estacao favorita?",
+        a: "Verao.",
         b: "Outono.",
         c: "Inverno.",
         d: "Primavera."
     },
     per2 = {
-        pergun: " No seu grupo de amigos você é a pessoa?",
+        pergun: "No seu grupo de amigos voce e a pessoa?",
         a: "Calmo(a), quieto(a).",
         b: "Esquisito(a).",
         c: "Animado(a) e extrovertido(a).",
         d: "Quieto(a), mas sempre ouvindo."
     },
     per3 = {
-        pergun: "Quando você enfrenta um novo desafio o que faz primeiro?",
-        a: " Organizo um plano detalhado antes de começar.",
-        b: "Reúno as pessoas para buscar uma solução em grupo.",
-        c: "Mergulho no problema e lidero a solução.",
-        d: "Crio uma abordagem única ou inovadora."
+        pergun: "Quando voce enfrenta um novo desafio o que faz primeiro?",
+        a: "Organizo um plano detalhado antes de comecar.",
+        b: "Reuno as pessoas para buscar uma solucao em grupo.",
+        c: "Mergulho no problema e lidero a solucao.",
+        d: "Crio uma abordagem unica ou inovadora."
     },
     per4 = {
         pergun: "Em um projeto qual seu papel normalmente?",
-        a: "Analiza, pensa em tudo e depois executa.",
+        a: "Analisa, pensa em tudo e depois executa.",
         b: "Gosta de liderar mas nunca gosta do resultado.",
-        c: "Não  faz nada, só apoia.",
+        c: "Nao faz nada, so apoia.",
         d: "Liderar e apoiar os outros a fazer mais coisas."
     },
     per5 = {
-        pergun: "Como você age em conflitos?",
-        a: "Aceita o que fazem para você.",
+        pergun: "Como voce age em conflitos?",
+        a: "Aceita o que fazem para voce.",
         b: "Resolver sempre sem brigas.",
         c: "Defende seus pensamentos antes de tudo.",
-        d: "Foca em brigar e mostrar que você é melhor."
+        d: "Foca em brigar e mostrar que voce e melhor."
     },
     per6 = {
         pergun: "O que te motiva a trabalhar?",
         a: "aa6",
-        b: "Datas, necessidade ou alguém apressando.",
+        b: "Datas, necessidade ou alguem apressando.",
         c: "Dinheiro.",
         d: "dd6"
     },
     per7 = {
         pergun: "Qual frase combina mais contigo?",
-        a: "“Devagar e sempre.”",
-        b: "“Se acalme, tudo vai passar”",
-        c: "“FIcarei ao teu lado até o fim”",
-        d: "“A criatividade transforma problemas em oportunidades”"
+        a: "\"Devagar e sempre.\"",
+        b: "\"Se acalme, tudo vai passar\"",
+        c: "\"Ficarei ao teu lado ate o fim\"",
+        d: "\"A criatividade transforma problemas em oportunidades\""
     },
     per8 = {
         pergun: "Qual sua maior qualidade?",
@@ -56,20 +56,22 @@ let arrayPerguntas = [
         d: "Resiliente"
     },
     per9 = {
-        pergun: "Se você tivesse que fazer algo maluco, o que faria?",
-        a: "Me mataria pela pátria",
-        b: "Colocaria uma panela na cabeça e sairia falando com objetos inanimados",
-        c: "Comeria um cérebro humano",
+        pergun: "Se voce tivesse que fazer algo maluco, o que faria?",
+        a: "Me mataria pela patria",
+        b: "Colocaria uma panela na cabeca e sairia falando com objetos inanimados",
+        c: "Comeria um cerebro humano",
         d: "Comeria um humano inteiro"
     },
     per10 = {
-        pergun: "Qual a profissão mais se encaixa para você?",
-        a: "Médico",
+        pergun: "Qual a profissao mais se encaixa para voce?",
+        a: "Medico",
         b: "Engenheiro",
         c: "Professor",
         d: "Empreendedor"
-    }
+    }    
 ]
+
+
 
 let arrayRespostas = []
 
@@ -126,10 +128,50 @@ function controlePerguntas() {
     }
 }
 
+
 function faltaDresposta() {
     let semResposta = 0
+    let tempparainner =  document.querySelector(".pgFinal").innerText
+    
+    let maior = 0;
+    let codmaior = 0;
 
-    arrayPerguntas.forEach((e) => {
+    contPontos()
+
+    if (ervilha1 > maior) {
+        maior = ervilha1;
+        codmaior = 0;
+    }
+    if (girassol > maior) {
+        maior = girassol;
+        codmaior = 1;
+    }
+    if (batata > maior) {
+        maior = batata;
+        codmaior = 2;
+    }
+    if (cereja > maior) {
+        maior = cereja;
+        codmaior = 3;
+    }
+    if (geloErvilha > maior) {
+        maior = geloErvilha;
+        codmaior = 4;
+    }
+    if (batatinha > maior) {
+        maior = batatinha;
+        codmaior = 5;
+    }
+    if (carnivora > maior) {
+        maior = carnivora;
+        codmaior = 6;
+    }
+    if (ervilha2 > maior) {
+        maior = ervilha2;
+        codmaior = 7;
+    }
+
+    arrayRespostas.forEach((e) => {
         if (e === -1) {
             semResposta++
             console.log(semResposta);
@@ -137,15 +179,70 @@ function faltaDresposta() {
     })
 
     if (semResposta != 0) {
-        alert("oi")
+        alert("Responda todas perguntas")
         console.log("semresposta")
+        i--;
     } else {
         document.querySelector(".pgFinal").style.display = ("block")
         document.querySelector(".pgPerguntas").style.display = ("none")
+        
+        
 
-        setTimeout(() => {
-            window.open('resultados/girassol.html')
-            console.log("foifoi");
+            setTimeout(()=>{
+                console.log("5");
+                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n5..."}, 1);
+            setTimeout(()=>{
+                console.log("4");
+                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n4..."}, 1000);
+            setTimeout(()=>{
+                console.log("3");
+                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n3..."}, 2000);
+            setTimeout(()=>{
+                console.log("2");
+                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n2..."}, 3000);
+            setTimeout(()=>{
+                console.log("1");
+                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n1..."}, 4000);
+
+                setTimeout(() => {
+                    document.querySelector(".pgFinal").innerHTML = "Parabens!!!"
+                }, 5000);
+            setTimeout(() => {
+                
+             switch (codmaior){
+                    case 0:
+                        console.log("ervilha1");
+                    break
+                    case 1:
+                        window.open('resultados/girassol.html')
+                        console.log("foifoi");
+                    break
+                    case 2:
+                        console.log("batata");
+                    break
+                    case 3:
+                        console.log("cereja");
+                        
+                    break
+                    case 4:
+                        console.log("geloervilha");
+                        
+                    break
+                    case 5:
+                        console.log("batatinha");
+                        
+                    break
+                    case 6:
+                        console.log("carnivora");
+                        
+                    break
+                    case 7:
+                        console.log("ervilha2");
+                        
+                    break
+            }
+        
+           
             //document.querySelector("#temp").innerHTML = 
 
         }, 5000);
