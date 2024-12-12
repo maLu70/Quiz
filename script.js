@@ -186,8 +186,6 @@ function faltaDresposta() {
         document.querySelector(".pgFinal").style.display = ("block")
         document.querySelector(".pgPerguntas").style.display = ("none")
         
-        
-
             setTimeout(()=>{
                 console.log("5");
                 document.querySelector(".pgFinal").innerHTML= tempparainner+"\n5..."}, 1);

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "Brianne";
+    src: url("/fonts/Brianne_s_hand.ttf") format("truetype");
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: "Brianne";
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    height: 97vh;
+    border:0;
+    background-image: url(/img/gramadocortado\ \(2\).jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.resultado .personagem {
+    width: 280px;
+    height: auto;
+    mix-blend-mode: multiply;
+    margin: 10px;
+
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#carta {
+    position: absolute;
+    z-index: -5;
+    width: 40vw;
+    height: 60vh;
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+    /* min-width: 550px;
+    min-height: 571px; */
+    width: 750px;
+    height: 600px;
+}
+
+.containerResul {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 750px;
+    height: 600px;
+}
+
+#maisResul {
+    display: flex;
+}
+
+.resultado p {
+    padding: 0;
+    margin:5px;
+}

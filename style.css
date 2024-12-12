@@ -1,7 +1,6 @@
 @font-face {
     font-family: "Brianne";
     src: url("fonts/Brianne_s_hand.ttf") format("truetype");
-
 }
 
 body {
@@ -18,20 +17,28 @@ body {
 }
 
 .container {
-    width: 40vw;
-    height: 60vh; 
+    /* width: 40vw;
+    height: 60vh;  */
     display: flex;
     justify-content: center;
     align-items: center;   
+    /* min-width: 550px;
+    min-height: 571px; */
+    width: 750px;
+    height: 600px;
 }
 
 .pgPerguntas {
     font-size: 2rem;
-    width: 30vw;
-    height: 50vh; 
+    /* width: 30vw;
+    height: 50vh;  */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* min-width: 409px;
+    min-height: 434px; */
+    width: 550px;
+    height: 500px;
 }
 
 .container img{
@@ -40,6 +47,10 @@ body {
     width: 40vw;
     height: 60vh;
     filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+    /* min-width: 550px;
+    min-height: 571px; */
+    width: 750px;
+    height: 600px;
 }
 
 button {
@@ -62,4 +73,35 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (width <= 770px) {
+    #divPergunta {
+        /* min-width: none;
+        min-height: none; */
+        width: 100%;
+        height: 100vw;
+    }
+
+    .container img, .container {
+        min-width: none;
+        min-height: none;
+        width: 100vw;
+        height: 90vw;
+    }
+
+    .pgPerguntas {
+        width: 80%;
+        height: 80vw;
+    }
+}
+
+@media (width <= 600px) {
+    .container img, .container {
+        height: 110vw;
+    }
+
+    .pgPerguntas {
+        height: 90vw;
+    }
 }
