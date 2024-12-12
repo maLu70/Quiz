@@ -41,7 +41,7 @@ body {
     height: 500px;
 }
 
-.container img{
+#carta {
     position: absolute;
     z-index: -5;
     width: 40vw;
@@ -51,6 +51,11 @@ body {
     min-height: 571px; */
     width: 750px;
     height: 600px;
+}
+
+#logo {
+    width: 400px;
+
 }
 
 button {
