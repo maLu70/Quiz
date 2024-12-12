@@ -36,10 +36,10 @@ let arrayPerguntas = [
     },
     per6 = {
         pergun: "O que te motiva a trabalhar?",
-        a: "aa6",
+        a: "Algo que me proporcione prazer",
         b: "Datas, necessidade ou alguem apressando.",
         c: "Dinheiro.",
-        d: "dd6"
+        d: "Algo que me de destaque"
     },
     per7 = {
         pergun: "Qual frase combina mais contigo?",
@@ -72,6 +72,7 @@ let arrayPerguntas = [
 ]
 
 
+let resul=0
 
 let arrayRespostas = []
 
@@ -135,6 +136,7 @@ function faltaDresposta() {
     
     let maior = 0;
     let codmaior = 0;
+    let total = ervilha1+girassol+batata+cereja+geloErvilha+batatinha+carnivora+ervilha2;
 
     contPontos()
 
@@ -209,34 +211,45 @@ function faltaDresposta() {
                 
              switch (codmaior){
                     case 0:
-                        console.log("ervilha1");
+                        resul=0
+                        window.open('resultados/resultado.html')
+                        localStorage.setItem('resul',resul );
                     break
                     case 1:
-                        window.open('resultados/girassol.html')
-                        console.log("foifoi");
+                        resul=1
+                        window.open('resultados/resultado.html')
+                        localStorage.setItem('resul',resul );
                     break
                     case 2:
+                        resul=2
                         console.log("batata");
+                        localStorage.setItem('resul',resul );
                     break
                     case 3:
+                        resul=3
                         console.log("cereja");
-                        
+                        localStorage.setItem('resul',resul );
                     break
                     case 4:
+                        resul=4
                         console.log("geloervilha");
+                        localStorage.setItem('resul',resul );
                         
                     break
                     case 5:
+                        resul=5
                         console.log("batatinha");
-                        
+                        localStorage.setItem('resul',resul );
                     break
                     case 6:
+                        resul=6
                         console.log("carnivora");
-                        
+                        localStorage.setItem('resul',resul );
                     break
                     case 7:
+                        resul=7
                         console.log("ervilha2");
-                        
+                        localStorage.setItem('resul',resul );
                     break
             }
         
