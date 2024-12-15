@@ -10,19 +10,17 @@ body {
     letter-spacing: 1px;
     height: 97vh;
     border:0;
-    background-image: url(img/gramadocortado\ \(2\).jpg);
+    background-image: url(/img/gramado.png);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .resultado .personagem {
-    width: 280px;
+    width: 18vw;
     height: auto;
     mix-blend-mode: multiply;
     margin: 10px;
-
 }
 
 .resultado {
@@ -35,21 +33,17 @@ body {
 #carta {
     position: absolute;
     z-index: -5;
-    width: 40vw;
-    height: 60vh;
+    width: 50vw;
+    height: 80vh;
     filter: drop-shadow(0 0 10px rgb(0, 0, 0));
-    /* min-width: 550px;
-    min-height: 571px; */
-    width: 750px;
-    height: 600px;
 }
 
 .containerResul {
     display: flex;
     justify-content: center;
     align-items: center;   
-    width: 750px;
-    height: 600px;
+    width: 40vw;
+    height: 70vh;
 }
 
 #maisResul {
@@ -59,4 +53,41 @@ body {
 .resultado p {
     padding: 0;
     margin:5px;
+}
+
+@media (max-width: 1700px) {
+    html {
+        font-size: 12px;
+    }
+
+    button {
+        width: 120px;
+    }
+}
+
+@media (max-width: 770px) {
+    .container {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    #carta {
+        width: 90vw;
+        height: 90vh;
+    }
+}
+
+@media (max-width:600px) {
+    html {
+        font-size: 8px;
+    }
+
+    .containerResul, #carta {
+        width: 95vw;
+        height: 95vw;
+    }
+
+    .resultado .personagem {
+        width: 30vw;
+    }
 }
