@@ -10,7 +10,7 @@ body {
     letter-spacing: 1px;
     height: 97vh;
     border:0;
-    background-image: url(img/gramado.jpg);
+    background-image: url(img/gramado.png);
     display: flex;
     justify-content: center;
     align-items: center;
