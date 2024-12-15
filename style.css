@@ -17,53 +17,46 @@ body {
 }
 
 .container {
-    /* width: 40vw;
-    height: 60vh;  */
+    width: 40vw;
+    height: 60vh; 
     display: flex;
     justify-content: center;
     align-items: center;   
-    /* min-width: 550px;
-    min-height: 571px; */
-    width: 750px;
-    height: 600px;
 }
 
 .pgPerguntas {
-    font-size: 2rem;
-    /* width: 30vw;
-    height: 50vh;  */
+    font-size: 2.5rem;
+    height: 60vh; 
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* min-width: 409px;
-    min-height: 434px; */
-    width: 550px;
-    height: 500px;
 }
 
 #carta {
     position: absolute;
     z-index: -5;
-    width: 40vw;
-    height: 60vh;
+    width: 50vw;
+    height: 80vh;
     filter: drop-shadow(0 0 10px rgb(0, 0, 0));
-    /* min-width: 550px;
-    min-height: 571px; */
-    width: 750px;
-    height: 600px;
 }
 
 #logo {
     width: 400px;
+}
 
+#perguntas {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 button {
     background-color: rgb(139, 65, 23);
     color: rgb(212, 158, 91);
     font-family: "Brianne";
-    font-size: 1.5rem;
-    width: 130px;
+    font-size: 2rem;
+    width: 160px;
     height: auto;
     border: solid 1px rgb(107, 76, 19);
     box-shadow: 0 0 2px black;
@@ -80,7 +73,17 @@ button {
     align-items: center;
 }
 
-@media (width <= 770px) {
+@media (max-width: 1700px) {
+    html {
+        font-size: 12px;
+    }
+
+    button {
+        width: 120px;
+    }
+}
+
+@media (max-width: 770px) {
     #divPergunta {
         /* min-width: none;
         min-height: none; */
@@ -88,25 +91,39 @@ button {
         height: 100vw;
     }
 
-    .container img, .container {
-        min-width: none;
-        min-height: none;
-        width: 100vw;
-        height: 90vw;
+    .container {
+        /* min-width: none;
+        min-height: none; */
+        width: 90vw;
+        height: 90vh;
     }
 
     .pgPerguntas {
-        width: 80%;
-        height: 80vw;
+        width: 70vw;
+        height: 70vh;
+    }
+
+    #carta {
+        width: 90vw;
+        height: 90vh;
     }
 }
 
-@media (width <= 600px) {
-    .container img, .container {
-        height: 110vw;
+@media (max-width:600px) {
+    html {
+        font-size: 8px;
     }
 
     .pgPerguntas {
-        height: 90vw;
+        height: 80vw;
+    }
+
+    .container, #carta {
+        width: 95vw;
+        height: 95vw;
+    }
+
+    button {
+        width: 90px;
     }
 }
