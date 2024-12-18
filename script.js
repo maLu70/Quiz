@@ -209,50 +209,13 @@ function faltaDresposta() {
                 }, 5000);
             setTimeout(() => {
                 
-             switch (codmaior){
-                    case 0:
-                        resul=0
-                        window.open('resultados/resultado.html')
-                        localStorage.setItem('resul',resul );
-                    break
-                    case 1:
-                        resul=1
-                        window.open('resultados/resultado.html')
-                        localStorage.setItem('resul',resul );
-                    break
-                    case 2:
-                        resul=2
-                        console.log("batata");
-                        localStorage.setItem('resul',resul );
-                    break
-                    case 3:
-                        resul=3
-                        console.log("cereja");
-                        localStorage.setItem('resul',resul );
-                    break
-                    case 4:
-                        resul=4
-                        console.log("geloervilha");
-                        localStorage.setItem('resul',resul );
-                        
-                    break
-                    case 5:
-                        resul=5
-                        console.log("batatinha");
-                        localStorage.setItem('resul',resul );
-                    break
-                    case 6:
-                        resul=6
-                        console.log("carnivora");
-                        localStorage.setItem('resul',resul );
-                    break
-                    case 7:
-                        resul=7
-                        console.log("ervilha2");
-                        localStorage.setItem('resul',resul );
-                    break
-            }
-        
+                let soma = cereja+ervilha1+ervilha2+girassol+batatinha+geloErvilha+batata+carnivora
+                salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha, batata,carnivora, soma)
+                
+                
+
+             
+            window.open('resultados/resultado.html')
            
             //document.querySelector("#temp").innerHTML = 
 
@@ -532,5 +495,42 @@ function contPontos() {
         }
 
     }
+    
 
+}
+function salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha, batata,carnivora , soma) {
+    let valores = [
+        { codigo: 1, valor: parseFloat(((ervilha1 / soma) * 100).toFixed(1)), nome: 'Disparervilha' },
+        { codigo: 2, valor: parseFloat(((girassol / soma) * 100).toFixed(1)), nome: 'Girassol'},
+        { codigo: 3, valor: parseFloat(((batata / soma) * 100).toFixed(1)), nome: 'Nozobstaculo' },
+        { codigo: 4, valor: parseFloat(((cereja / soma) * 100).toFixed(1)), nome: 'Cereja Bomba' },
+        { codigo: 5, valor: parseFloat(((geloErvilha / soma) * 100).toFixed(1)), nome: 'Disparervilha Gelada' },
+        { codigo: 6, valor: parseFloat(((batatinha / soma) * 100).toFixed(1)), nome: 'Batatamina'},
+        { codigo: 7, valor: parseFloat(((carnivora / soma) * 100).toFixed(1)), nome: 'Carenívora' },
+        { codigo: 8, valor: parseFloat(((ervilha2 / soma) * 100).toFixed(1)), nome:'Duplaervilha' }
+    ];
+
+    top4 = [{ codigo: -1, valor: 0 }, { codigo: -1, valor: 0 }, { codigo: -1, valor: 0 }, { codigo: -1, valor: 0 }];
+
+    valores.forEach(item => {
+        if (item.valor > top4[0].valor) {
+            top4[3] = top4[2];
+            top4[2] = top4[1];
+            top4[1] = top4[0];
+            top4[0] = item;
+        } else if (item.valor > top4[1].valor) {
+            top4[3] = top4[2];
+            top4[2] = top4[1];
+            top4[1] = item;
+        } else if (item.valor > top4[2].valor) {
+            top4[3] = top4[2];
+            top4[2] = item;
+        } else if (item.valor > top4[3].valor) {
+            top4[3] = item;
+        }
+    });
+
+    localStorage.setItem('top3Codigos', JSON.stringify(top4));
+    console.log(top4);
+    
 }
