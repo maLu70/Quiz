@@ -215,7 +215,7 @@ function faltaDresposta() {
                 
 
              
-            window.open('resultados/resultado.html')
+            window.open('resultados/index.html')
            
             //document.querySelector("#temp").innerHTML = 
 
