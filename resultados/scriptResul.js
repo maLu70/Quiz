@@ -16,35 +16,35 @@ let resultado = localStorage.getItem('resul');
         
         switch (top3[0].codigo) {
             case 1:
-                personagem.src = "/img/GIFs/disparervilha.gif"
+                personagem.src = "img/GIFs/disparervilha.gif"
                 break;
         
             case 2:
-                personagem.src = "/img/GIFs/girassol.gif"
+                personagem.src = "img/GIFs/girassol.gif"
                 break;
         
             case 3:
-                personagem.src = "/img/GIFs/Wall_nut_gif.webp"
+                personagem.src = "img/GIFs/Wall_nut_gif.webp"
                 break;
         
             case 4:
-                personagem.src = "/img/GIFs/cherrybombs.webp"
+                personagem.src = "img/GIFs/cherrybombs.webp"
                 break;
         
             case 5:
-                 personagem.src = "/img/GIFs/Snowpea.webp"
+                 personagem.src = "img/GIFs/Snowpea.webp"
                 break;
         
             case 6:
-                personagem.src = "/img/GIFs/potatomine.gif"
+                personagem.src = "img/GIFs/potatomine.gif"
                 break;
         
             case 7:
-                personagem.src = "/img/GIFs/choper.gif"
+                personagem.src = "img/GIFs/choper.gif"
                 break;
         
             case 8:
-                personagem.src = "/img/GIFs/repeter.gif"
+                personagem.src = "img/GIFs/repeter.gif"
                 break;
         }
         
