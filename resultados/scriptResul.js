@@ -40,7 +40,7 @@ let resultado = localStorage.getItem('resul');
                 break;
         
             case 7:
-                personagem.src = "img/GIFs/choper.gif"
+                personagem.src = "img/GIFs/choper.webp"
                 break;
         
             case 8:
