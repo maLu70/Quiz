@@ -42,7 +42,20 @@ body {
 }
 
 #logo {
-    width: 400px;
+    width: 25%;
+    mix-blend-mode: multiply;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+#containerInicial {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: auto;
+    align-items: center;
 }
 
 #perguntas {
@@ -60,6 +73,7 @@ button {
     height: auto;
     border: solid 1px rgb(107, 76, 19);
     box-shadow: 0 0 2px black;
+    cursor: pointer;
 }
 
 #btn {
@@ -70,7 +84,32 @@ button {
 .pgInicial {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.pgFinal {
+    display: flex;
+    flex-direction: column;
+}
+
+.pgFinal #mensagem, .pgFinal #zombies {
+    height: 50%;
+    font-size: 4rem;
+}
+
+.pgFinal #mensagem {
+    text-align: left;
+    padding-right: 5rem;
+}
+
+.pgFinal #zombies  {
+    text-align: right;
+    padding-left: 15rem;
+}
+
+label, input {
+    cursor: pointer;
 }
 
 @media (max-width: 1700px) {

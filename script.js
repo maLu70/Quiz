@@ -68,11 +68,11 @@ let arrayPerguntas = [
         b: "Engenheiro",
         c: "Professor",
         d: "Empreendedor"
-    }    
+    }
 ]
 
 
-let resul=0
+let resul = 0
 
 let arrayRespostas = []
 
@@ -132,11 +132,11 @@ function controlePerguntas() {
 
 function faltaDresposta() {
     let semResposta = 0
-    let tempparainner =  document.querySelector(".pgFinal").innerText
-    
+    let tempparainner = document.querySelector(".pgFinal").innerText
+
     let maior = 0;
     let codmaior = 0;
-    let total = ervilha1+girassol+batata+cereja+geloErvilha+batatinha+carnivora+ervilha2;
+    let total = ervilha1 + girassol + batata + cereja + geloErvilha + batatinha + carnivora + ervilha2;
 
     contPontos()
 
@@ -185,39 +185,15 @@ function faltaDresposta() {
         console.log("semresposta")
         i--;
     } else {
-        document.querySelector(".pgFinal").style.display = ("block")
+        document.querySelector(".pgFinal").style.display = ("flex")
         document.querySelector(".pgPerguntas").style.display = ("none")
-        
-            setTimeout(()=>{
-                console.log("5");
-                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n5..."}, 1);
-            setTimeout(()=>{
-                console.log("4");
-                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n4..."}, 1000);
-            setTimeout(()=>{
-                console.log("3");
-                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n3..."}, 2000);
-            setTimeout(()=>{
-                console.log("2");
-                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n2..."}, 3000);
-            setTimeout(()=>{
-                console.log("1");
-                document.querySelector(".pgFinal").innerHTML= tempparainner+"\n1..."}, 4000);
 
-                setTimeout(() => {
-                    document.querySelector(".pgFinal").innerHTML = "Parabens!!!"
-                }, 5000);
-            setTimeout(() => {
-                
-                let soma = cereja+ervilha1+ervilha2+girassol+batatinha+geloErvilha+batata+carnivora
-                salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha, batata,carnivora, soma)
-                
-                
+        setTimeout(() => {
 
-             
+            let soma = cereja + ervilha1 + ervilha2 + girassol + batatinha + geloErvilha + batata + carnivora
+            salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha, batata, carnivora, soma)
+
             window.open('resultados/index.html')
-           
-            //document.querySelector("#temp").innerHTML = 
 
         }, 5000);
     }
@@ -313,21 +289,21 @@ function contPontos() {
             switch (arrayRespostas[j]) {
                 case 0:
                     ervilha1++
-                    geloErvilha ++
-                    ervilha2+=2
+                    geloErvilha++
+                    ervilha2 += 2
                     break;
-    
+
                 case 1:
                     break
                     ervilha1 += 0.5
                     geloErvilha += 0.5
-                    ervilha2 +=1
+                    ervilha2 += 1
                 case 2:
                     break;
                     girassol += 0.5
                 case 3:
                     carnivora++
-                    batatinha+= 0.8
+                    batatinha += 0.8
                     break;
             }
         }
@@ -336,23 +312,23 @@ function contPontos() {
             switch (arrayRespostas[j]) {
                 case 0:
                     ervilha1++
-                    geloErvilha+=0.5
+                    geloErvilha += 0.5
                     ervilha2++
                     break;
 
                 case 1:
-                    cereja+=2
+                    cereja += 2
                     break
 
                 case 2:
                     girassol++
                     batata++
-                    batatinha+=0.5
+                    batatinha += 0.5
                     break;
 
                 case 3:
-                    geloErvilha+=0.7
-                    ervilha2+=0.7
+                    geloErvilha += 0.7
+                    ervilha2 += 0.7
                     break;
             }
         }
@@ -360,7 +336,7 @@ function contPontos() {
         if (j == 4) {
             switch (arrayRespostas[j]) {
                 case 0:
-                    batata+=1.5
+                    batata += 1.5
                     break;
 
                 case 1:
@@ -368,12 +344,12 @@ function contPontos() {
                     break
 
                 case 2:
-                    cereja+=1.5
-                    carnivora+=2
+                    cereja += 1.5
+                    carnivora += 2
                     break;
 
                 case 3:
-                    cereja+=1.5
+                    cereja += 1.5
                     geloErvilha++
                     break;
             }
@@ -391,12 +367,12 @@ function contPontos() {
 
                 case 2:
                     cereja++
-                    batatinha+=2
+                    batatinha += 2
                     break;
 
                 case 3:
-                    cereja+=2
-                    carnivora+=2
+                    cereja += 2
+                    carnivora += 2
                     break;
             }
         }
@@ -404,20 +380,20 @@ function contPontos() {
         if (j == 6) {
             switch (arrayRespostas[j]) {
                 case 0:
-                    girassol+=0,5
-                    batata+=1.5
+                    girassol += 0, 5
+                    batata += 1.5
                     break;
 
                 case 1:
-                    geloErvilha+=2
+                    geloErvilha += 2
                     break
 
                 case 2:
-                    ervilha1+=2
+                    ervilha1 += 2
                     break;
 
                 case 3:
-                    batata+=0,7
+                    batata += 0, 7
                     break;
             }
         }
@@ -426,27 +402,27 @@ function contPontos() {
             switch (arrayRespostas[j]) {
                 case 0:
                     ervilha1++
-                    batata+=0.3
-                    batatinha+=0.4
+                    batata += 0.3
+                    batatinha += 0.4
                     break;
 
                 case 1:
-                    girassol+=0.5
-                    ervilha2+=1.2
+                    girassol += 0.5
+                    ervilha2 += 1.2
                     batatinha++
                     geloErvilha++
                     break
 
                 case 2:
-                    ervilha2+=1.5
-                    batatinha+=0,5
+                    ervilha2 += 1.5
+                    batatinha += 0, 5
                     geloErvilha++
-                    ervilha1+=1.5
+                    ervilha1 += 1.5
                     break;
 
                 case 3:
                     batatinha++
-                    batata+=1.5
+                    batata += 1.5
                     break;
             }
         }
@@ -454,8 +430,8 @@ function contPontos() {
         if (j == 8) {
             switch (arrayRespostas[j]) {
                 case 0:
-                    batata+=2
-                    cereja+=1,5
+                    batata += 2
+                    cereja += 1, 5
                     break;
 
                 case 1:
@@ -467,7 +443,7 @@ function contPontos() {
                     break;
 
                 case 3:
-                    carnivora+=2
+                    carnivora += 2
                     break;
             }
         }
@@ -479,35 +455,34 @@ function contPontos() {
                     break;
 
                 case 1:
-                    batatinha+=0,5
+                    batatinha += 0, 5
                     break
 
                 case 2:
                     ervilha1++
                     ervilha2++
-                    geloErvilha+=1.3
+                    geloErvilha += 1.3
                     break;
 
                 case 3:
-                    girassol+=0.5
+                    girassol += 0.5
                     break;
             }
         }
 
     }
-    
 
 }
-function salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha, batata,carnivora , soma) {
+function salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha, batata, carnivora, soma) {
     let valores = [
         { codigo: 1, valor: parseFloat(((ervilha1 / soma) * 100).toFixed(1)), nome: 'Disparervilha' },
-        { codigo: 2, valor: parseFloat(((girassol / soma) * 100).toFixed(1)), nome: 'Girassol'},
+        { codigo: 2, valor: parseFloat(((girassol / soma) * 100).toFixed(1)), nome: 'Girassol' },
         { codigo: 3, valor: parseFloat(((batata / soma) * 100).toFixed(1)), nome: 'Nozobstaculo' },
         { codigo: 4, valor: parseFloat(((cereja / soma) * 100).toFixed(1)), nome: 'Cereja Bomba' },
         { codigo: 5, valor: parseFloat(((geloErvilha / soma) * 100).toFixed(1)), nome: 'Disparervilha Gelada' },
-        { codigo: 6, valor: parseFloat(((batatinha / soma) * 100).toFixed(1)), nome: 'Batatamina'},
-        { codigo: 7, valor: parseFloat(((carnivora / soma) * 100).toFixed(1)), nome: 'Carenívora' },
-        { codigo: 8, valor: parseFloat(((ervilha2 / soma) * 100).toFixed(1)), nome:'Duplaervilha' }
+        { codigo: 6, valor: parseFloat(((batatinha / soma) * 100).toFixed(1)), nome: 'Batatamina' },
+        { codigo: 7, valor: parseFloat(((carnivora / soma) * 100).toFixed(1)), nome: 'Carnivora' },
+        { codigo: 8, valor: parseFloat(((ervilha2 / soma) * 100).toFixed(1)), nome: 'Duplaervilha' }
     ];
 
     top4 = [{ codigo: -1, valor: 0 }, { codigo: -1, valor: 0 }, { codigo: -1, valor: 0 }, { codigo: -1, valor: 0 }];
@@ -532,5 +507,5 @@ function salvartop3(cereja, ervilha1, ervilha2, girassol, batatinha, geloErvilha
 
     localStorage.setItem('top3Codigos', JSON.stringify(top4));
     console.log(top4);
-    
+
 }

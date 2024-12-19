@@ -17,10 +17,9 @@ body {
 }
 
 .resultado .personagem {
-    width: 18vw;
+    width: 15vw;
     height: auto;
     mix-blend-mode: multiply;
-    margin: 10px;
 }
 
 .resultado {
@@ -36,6 +35,11 @@ body {
     width: 50vw;
     height: 80vh;
     filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+}
+
+#vencedor {
+    max-width:90%;
+    text-align: center;
 }
 
 .containerResul {

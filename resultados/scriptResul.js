@@ -8,7 +8,7 @@ let resultado = localStorage.getItem('resul');
         let vencedor = document.getElementById("vencedor")
         let personagem = document.querySelector('.personagem')
         
-        vencedor.textContent = "Voce e "+top3[0].valor+"% "+top3[0].nome
+        vencedor.textContent = "Voce e como um(a)"+top3[0].nome
         resul1.textContent = top3[1].nome + ": " + top3[1].valor + "%";
         resul2.textContent = top3[2].nome + ": " + top3[2].valor + "%";
         resul3.textContent = top3[3].nome + ": " + top3[3].valor + "%";

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Quiz Plants vs. Zombies</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,13 +13,23 @@
     <div class="container">
         <img id="carta" src="resultados/img/cartar.png" alt="">
         <div class="pgInicial">
-            <img src="resultados/img/logo.png" alt="" id="logo">
-            <h1>Qual Planta Diurna Voce Seria? </h1>
-            <button id="btnComecar" onclick="comecar()">COMECAR</button>
+            <div id="txtInicial">
+                <h1>Qual Planta Diurna Voce Seria? </h1>
+            </div>
+
+            <div id="containerInicial">
+                
+                <img src="resultados/img/logo.png" alt="" id="logo">
+            
+                <div id="btnInicial">
+                    <button id="btnComecar" onclick="comecar()">COMECAR</button>
+                </div>
+            </div>
+
         </div>
 
         <div class="pgPerguntas" style="display: none;">
-            <div id="divPergunta" >
+            <div id="divPergunta">
                 <p id="perguntas"></p>
 
                 <input name="radios" type="radio" value="radio1" id="a">
@@ -49,8 +59,14 @@
         </div>
 
         <div class="pgFinal" style="display: none;">
-            <p>Estamos analisando seus dados, aguarde</p>
-            <p id="temp"></p>
+
+            <div id="mensagem">
+                <p>Estamos analisando seu cerebro, aguarde</p>
+            </div>
+
+            <div id="zombies">
+                <p>Atenciosamente, Zombies</p>
+            </div>
         </div>
     </div>
 
