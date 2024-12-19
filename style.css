@@ -90,9 +90,7 @@ button {
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    border: solid 2px red;
     align-items: center;
-
 }
 
 .pgFinal {
